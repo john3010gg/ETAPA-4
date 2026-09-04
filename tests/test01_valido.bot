@@ -1,0 +1,21 @@
+create
+int bot contador
+on activation:
+store 0.
+end
+end
+bool bot bandera
+on default:
+store true.
+end
+end
+execute
+activate contador.
+advance contador.
+if bandera:
+advance contador.
+end
+while contador < 10:
+advance contador.
+end
+end

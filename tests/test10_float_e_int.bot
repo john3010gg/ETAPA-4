@@ -1,0 +1,15 @@
+create
+int bot bar
+on activation:
+store 3.5.
+end
+end
+execute
+activate bar.
+if bar > 2.5:
+advance bar.
+end
+if bar == 4:
+advance bar.
+end
+end

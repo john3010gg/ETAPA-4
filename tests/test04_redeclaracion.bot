@@ -1,0 +1,14 @@
+create
+int bot bar
+on activation:
+store 1.
+end
+end
+bool bot bar
+on default:
+store true.
+end
+end
+execute
+activate bar.
+end

@@ -22,7 +22,8 @@ reserved = {
     'false': 'FALSE',
     'and': 'AND',
     'or': 'OR',
-    'not': 'NOT'
+    'not': 'NOT',
+    'me': 'ME'
 }
 
 # Lista de tokens

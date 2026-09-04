@@ -1,0 +1,17 @@
+create
+int bot bar
+on activation:
+store true.
+end
+end
+int bot bar
+on default:
+store me.
+end
+end
+execute
+activate undef.
+advance bar.
+if 3 + true:
+end
+end

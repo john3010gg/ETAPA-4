@@ -31,26 +31,36 @@ def main():
     if hay_errores_lexicos:
         for err in lexical_errors:
             print(err)
-            
-    # Limpiar los errores para evitar duplicados 
+
+        # Si hubo errores lexicos no se continua con el analisis sintactico
+        sys.exit(1)
+
+    # Limpiar los errores para evitar duplicados
     lexical_errors.clear()
     ast_root = None
-    
+
     try:
-       
         # Si se encuentra error sintáctico, la función p_error imprimirá y abortará el script (sys.exit)
+        lexer.lineno = 1
         ast_root = parser.parse(content, lexer=lexer)
     except SystemExit:
         sys.exit(1)
-
-    # El programa aborta sin imprimir el árbol.
-    if hay_errores_lexicos:
-        sys.exit(1)
         
-    # Impresión del AST de ser correcto
-    if ast_root and ast_root.execute_block:
-        # Imprimimos usando un nivel de indentación base de 0
-        print(ast_root.execute_block.print_node(0))
+    # Análisis de Contexto
+    if ast_root:
+        from context_analyzer import ContextAnalyzer
+        analyzer = ContextAnalyzer()
+        context_errors = analyzer.analyze(ast_root)
+        
+        if context_errors:
+            for err in context_errors:
+                print(err)
+            sys.exit(1)
+            
+        # Impresión del AST de ser correcto (sin errores lexicos, sintacticos ni de contexto)
+        if ast_root.execute_block:
+            # Imprimimos usando un nivel de indentación base de 0
+            print(ast_root.execute_block.print_node(0))
 
 if __name__ == "__main__":
     main()

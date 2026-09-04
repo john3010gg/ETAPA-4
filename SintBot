@@ -1,6 +1,0 @@
-#!/bin/bash
-if command -v python3 >/dev/null 2>&1; then
-    python3 "$(dirname "$0")/main.py" "$@"
-else
-    python "$(dirname "$0")/main.py" "$@"
-fi

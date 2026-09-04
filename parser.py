@@ -113,6 +113,10 @@ def p_expr_var(p):
     'expr : ID'
     p[0] = VarNode(p[1], p.lineno(1))
 
+def p_expr_me(p):
+    'expr : ME'
+    p[0] = VarNode('me', p.lineno(1))
+
 def p_expr_literal_number(p):
     '''expr : NUMBER
             | FLOAT'''

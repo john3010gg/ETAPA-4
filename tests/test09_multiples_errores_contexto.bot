@@ -1,0 +1,18 @@
+create
+int bot bar
+on activation:
+store true.
+end
+end
+int bot bar
+on default:
+store 5.
+end
+end
+execute
+activate fantasma.
+advance bar.
+if 3 + true:
+advance bar.
+end
+end
