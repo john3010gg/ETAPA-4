@@ -1,0 +1,19 @@
+create
+char bot b
+on activation:
+store 'H'. send.
+store 'e'. send.
+store 'l'. send.
+store 'l'. send.
+store 'o'. send.
+store ' '. send.
+store 'B'. send.
+store 'O'. send.
+store 'T'. send.
+store '!'. send.
+store '\n'. send.
+end
+end
+execute
+activate b.
+end

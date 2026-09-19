@@ -1,0 +1,16 @@
+create
+char bot emisor
+on activation:
+drop 'X'.
+end
+end
+int bot soltador
+on activation:
+collect as x.
+drop x.
+end
+end
+execute
+activate emisor.
+activate soltador.
+end

@@ -3,4 +3,5 @@ if [ -z "$1" ]; then
     echo "Uso: ./bot <Archivo.bot>"
     exit 1
 fi
-python3 main.py "$1"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+python3 "$DIR/Etapa4/main.py" "$1"

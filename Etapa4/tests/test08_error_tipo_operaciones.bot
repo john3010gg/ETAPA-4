@@ -1,0 +1,12 @@
+create
+int bot bar
+on activation:
+store 1.
+end
+end
+execute
+activate bar.
+if 3 + true and bar:
+advance bar.
+end
+end

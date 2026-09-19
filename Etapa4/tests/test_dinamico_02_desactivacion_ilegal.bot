@@ -1,0 +1,6 @@
+create
+int bot r
+end
+execute
+deactivate r.
+end

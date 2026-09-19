@@ -26,32 +26,25 @@ El sistema comprende las cuatro etapas del proceso de traducción e interpretaci
 
 ```text
 Traductores-Final/
-├── bot                             # Script ejecutable para Linux/Unix
-├── bot.bat                         # Script ejecutable para Windows
-├── main.py                         # Punto de entrada principal
-├── interpreter.py                  # Motor del intérprete y verificaciones dinámicas
-├── context_analyzer.py             # Analizador contextual / chequeador de tipos
-├── bot_symtable.py                 # Tabla de símbolos y manejo de alcances
-├── parser.py                       # Analizador sintáctico (PLY yacc)
-├── bot_ast.py                      # Clases y jerarquía de nodos del AST
-├── lexer.py                        # Analizador léxico (PLY lex)
-├── ply/                            # Biblioteca PLY embebida (sin dependencias externas)
-├── informes/                       # Informes técnicos de las entregas
+├── bot                             # Wrapper ejecutable para Linux/Unix
+├── bot.bat                         # Wrapper ejecutable para Windows
+├── README.md                       # Documentación principal
+├── informes/                       # Informes técnicos de todas las etapas
 │   ├── informe_etapa_2.md
 │   ├── informe_etapa_3.md
 │   └── informe_etapa_4.md          # Informe técnico detallado de la Etapa 4
-└── tests/                          # Batería de pruebas automatizadas
-    ├── test_hello_bot.bot          # Prueba completa (imprime "Hello BOT!")
-    ├── test_fibonacci.bot          # Prueba completa (sucesión de Fibonacci)
-    ├── test_dinamico_01_*.bot      # Activación ilegal
-    ├── test_dinamico_02_*.bot      # Desactivación ilegal
-    ├── test_dinamico_03_*.bot      # Comportamiento inexistente
-    ├── test_dinamico_04_*.bot      # División por cero
-    ├── test_dinamico_05_*.bot      # Lectura inadecuada
-    ├── test_dinamico_06_*.bot      # Colección inadecuada
-    ├── test_dinamico_07_*.bot      # Almacenamiento inadecuado
-    ├── test_dinamico_08_*.bot      # Soltado inadecuado
-    └── test00_*.bot ... test10_*.bot # Pruebas estáticas y sintácticas
+└── Etapa4/                         # Implementación completa de la Etapa Final
+    ├── bot                         # Script ejecutable en Linux/LDC
+    ├── bot.bat                     # Script ejecutable en Windows
+    ├── main.py                     # Punto de entrada del intérprete
+    ├── interpreter.py              # Motor de ejecución y simulación dinámica
+    ├── context_analyzer.py         # Analizador contextual
+    ├── bot_symtable.py             # Tabla de símbolos
+    ├── parser.py                   # Analizador sintáctico
+    ├── bot_ast.py                  # Jerarquía del AST
+    ├── lexer.py                    # Analizador léxico
+    ├── ply/                        # Biblioteca PLY embebida
+    └── tests/                      # Suite completa de pruebas de la Etapa 4
 ```
 
 ---

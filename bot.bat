@@ -1,6 +1,6 @@
 @echo off
 if "%~1"=="" (
-    echo Uso: bot.bat ^<Archivo.bot^>
+    echo Uso: bot ^<Archivo.bot^>
     exit /b 1
 )
-python main.py "%~1"
+python "%~dp0Etapa4\main.py" %*

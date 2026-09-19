@@ -1,0 +1,13 @@
+create
+int bot r
+on activation:
+store 5.
+end
+on me > 10:
+store 0.
+end
+end
+execute
+activate r.
+advance r.
+end

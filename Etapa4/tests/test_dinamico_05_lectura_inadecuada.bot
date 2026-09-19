@@ -1,0 +1,9 @@
+create
+int bot r
+on activation:
+receive.
+end
+end
+execute
+activate r.
+end

@@ -1,0 +1,16 @@
+create
+char bot emisor
+on activation:
+drop 'X'.
+end
+end
+int bot receptor
+on activation:
+collect as x.
+store x.
+end
+end
+execute
+activate emisor.
+activate receptor.
+end

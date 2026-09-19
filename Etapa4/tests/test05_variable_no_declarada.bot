@@ -1,0 +1,10 @@
+create
+int bot bar
+on activation:
+store 1.
+end
+end
+execute
+activate bar.
+advance fantasma.
+end

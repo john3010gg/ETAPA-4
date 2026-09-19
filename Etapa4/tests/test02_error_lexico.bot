@@ -1,0 +1,13 @@
+create
+int bot bar
+on activation:
+store 3.
+end
+end
+execute
+activate bar.
+if bar # 5:
+advance bar.
+end
+store @bar.
+end
