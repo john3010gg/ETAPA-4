@@ -1,0 +1,9 @@
+create
+int bot r
+on activation:
+store 10 / 0.
+end
+end
+execute
+activate r.
+end

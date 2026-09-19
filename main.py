@@ -57,10 +57,10 @@ def main():
                 print(err)
             sys.exit(1)
             
-        # Impresión del AST de ser correcto (sin errores lexicos, sintacticos ni de contexto)
-        if ast_root.execute_block:
-            # Imprimimos usando un nivel de indentación base de 0
-            print(ast_root.execute_block.print_node(0))
+        # Ejecución del Intérprete de BOT
+        from interpreter import Interpreter
+        interpreter = Interpreter()
+        interpreter.interpret(ast_root)
 
 if __name__ == "__main__":
     main()

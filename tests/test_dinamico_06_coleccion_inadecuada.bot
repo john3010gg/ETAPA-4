@@ -1,0 +1,15 @@
+create
+char bot escritor
+on activation:
+drop 'a'.
+end
+end
+int bot lector
+on activation:
+collect.
+end
+end
+execute
+activate escritor.
+activate lector.
+end
